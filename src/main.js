@@ -1,4 +1,4 @@
-import Bootloader from './Bootloader.js';
+import Bootloader from "./Bootloader.js";
 
 const config = {
     title: "Riftbreaker",
@@ -6,24 +6,21 @@ const config = {
     type: Phaser.AUTO,
     scale: {
         parent: "phaser_container",
-        width: 960,
-        height: 600,
+        width: 1500,
+        height: 416,
         mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH
+        autoCenter: Phaser.Scale.CENTER_BOTH,
     },
-    backgroundColor: "#c7ecee",
     pixelArt: true,
     physics: {
         default: "arcade",
-        "arcade": {
+        arcade: {
             gravity: {
-                y: 500
-            }
-        }
+                y: 500,
+            },
+        },
     },
-    scene: [
-        Bootloader
-    ]
+    scene: [Bootloader],
 };
 
 new Phaser.Game(config);
